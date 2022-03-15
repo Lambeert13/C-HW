@@ -3,7 +3,6 @@ using namespace std;
 
 int main()
 {
-    cout << "Zhang Linbo" << endl;
     cout << "Enter a integer between 0~1000: ";
     int number = 0;
     cin >> number;
