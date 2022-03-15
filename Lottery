@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int RandNumber = rand() % 90 + 10; //抽出一个两位整数
+    cout << "Enter a two-digit number: ";
+    int numbers = 0;
+    cin >> numbers;
+    int RandNumber1 = RandNumber / 10; //把随机数个十位数分开
+    int RandNumber2 = RandNumber % 10;
+
+    int number1 = numbers / 10;
+    int number2 = numbers % 10;
+    if (numbers == RandNumber)
+    {
+        cout << "Lottery in exact order, the award is $10,000" << endl;
+    }
+    else if (number1 == RandNumber2  && number2 == RandNumber1)
+    {
+        cout << "matches the lottery, the award is $3,000" << endl;
+    }
+    else if (number1 == RandNumber1 || number1 == RandNumber2 || number2 == RandNumber1 || number2 == RandNumber2)
+    {
+        cout << "matches a digit in the lottery, the award is $1, 000" << endl;
+    }
+		else {
+        cout << "nothing" << endl;
+    }
+}
